@@ -1,0 +1,318 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #1e272e;
+}
+
+.warp {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: rotateZ(45deg);
+}
+
+// 星星部分样式
+.star {
+  list-style: none;
+  height: 3px;
+  background: linear-gradient(-45deg, #c7ecee, rgba(0, 0, 255, 0));
+  position: absolute;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 6px #c7ecee);
+  animation: sacling 3.3s infinite, moveTo 3s infinite;
+
+  &:nth-child(1) {
+    top: 30%;
+    left: 25%;
+    animation-delay: 1.2s;
+  }
+
+  &:nth-child(2) {
+    top: 40%;
+    left: 85%;
+    animation-delay: 4.3s;
+
+  }
+
+  &:nth-child(3) {
+    top: 15%;
+    left: 35%;
+    animation-delay: 4s;
+  }
+
+  &:nth-child(4) {
+    top: 60%;
+    left: 40%;
+    animation-delay: 6s;
+  }
+
+  &:nth-child(5) {
+    top: 44%;
+    left: 60%;
+    animation-delay: 2s;
+  }
+
+  &:nth-child(6) {
+    top: 80%;
+    left: 25%;
+    animation-delay: 3.6s;
+  }
+
+  &:nth-child(7) {
+    top: 55%;
+    left: 80%;
+    animation-delay: 1s;
+  }
+
+  &:nth-child(8) {
+    top: 20%;
+    left: 85%;
+    animation-delay: 1.5s;
+  }
+
+  &:nth-child(9) {
+    top: 89%;
+    left: 33%;
+    animation-delay: 4.3s;
+  }
+
+  &:nth-child(10) {
+    top: 85%;
+    left: 13%;
+    animation-delay: 1.7s;
+  }
+
+  &:nth-child(11) {
+    top: 30%;
+    left: 45%;
+    animation-delay: 3.3s;
+  }
+
+  &:nth-child(12) {
+    top: 10%;
+    left: 10%;
+    animation-delay: 6s;
+  }
+
+  &:nth-child(13) {
+    top: 80%;
+    left: 78%;
+    animation-delay: 5.4s;
+  }
+
+  &:nth-child(14) {
+    top: 18%;
+    left: 65%;
+    animation-delay: 3.7s;
+  }
+
+  &:nth-child(15) {
+    top: 70%;
+    left: 70%;
+    animation-delay: 2.2s;
+  }
+
+  &:nth-child(16) {
+    top: 62%;
+    left: 75%;
+    animation-delay: 3.9s;
+  }
+
+  &:nth-child(17) {
+    top: 22%;
+    left: 72%;
+    animation-delay: 4.6s;
+  }
+
+  &:nth-child(18) {
+    top: 75%;
+    left: 90%;
+    animation-delay: 3s;
+  }
+
+  &:nth-child(19) {
+    top: 64%;
+    left: 94%;
+    animation-delay: 2.6s;
+  }
+
+  &:nth-child(20) {
+    top: 50%;
+    left: 17%;
+    animation-delay: 7s;
+  }
+
+  &:nth-child(21) {
+    top: 40%;
+    left: 40%;
+    animation-delay: 5.4s;
+  }
+
+  &:nth-child(22) {
+    top: 69%;
+    left: 62%;
+    animation-delay: 4.1s;
+  }
+
+  &:nth-child(23) {
+    top: 6%;
+    left: 90%;
+    animation-delay: 2.9s;
+  }
+
+  &:nth-child(24) {
+    top: 90%;
+    left: 88%;
+    animation-delay: 3.6s;
+  }
+
+  &:nth-child(25) {
+    top: 75%;
+    left: 20%;
+    animation-delay: 1.7s;
+  }
+
+  @keyframes sacling {
+    0% {
+      width: 0;
+    }
+
+    50% {
+      width: 180px;
+    }
+
+    100% {
+      width: 0;
+    }
+  }
+
+  @keyframes moveTo {
+    0% {
+      transform: translateX(0)
+    }
+
+    100% {
+      transform: translateX(500px);
+    }
+  }
+}
+
+.text {
+  width: 530px;
+  margin: 60px auto 0;
+  height: 1000px;
+  transform: rotateZ(-45deg);
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 36px;
+  font-family: tahoma;
+  font-weight: bold;
+  color: #fff;
+}
+
+#form-wrap {
+  overflow: hidden;
+  height: 447px;
+  position: relative;
+  top: 0;
+  transition: all 1s ease-in-out .3s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 128px;
+    left: 0;
+    background: #e4e4e4;
+    border-radius: 20px;
+    width: 530px;
+    height: 317px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: skyblue;
+    border-radius: 20px;
+    width: 530px;
+    height: 259px;
+  }
+
+  &form-wrap.hide:after,
+  &form-wrap.hide::before {
+    display: none;
+  }
+
+  &:hover {
+    height: 800px;
+    top: -200px;
+  }
+
+  &:hover form {
+    height: 553px;
+  }
+
+  input[type=submit] {
+    position: relative;
+    font-family: tahoma;
+    font-size: 24px;
+    color: gray;
+    width: 100%;
+    text-align: center;
+    opacity: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 20px;
+    transition: opacity 0.7s ease-in-out 0s;
+  }
+}
+
+form {
+  background: #fff;
+  position: relative;
+  top: 200px;
+  overflow: hidden;
+  height: 200px;
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #fff;
+  border-right: 3px;
+  transition: all 1s ease-in-out .3s;
+}
+
+label {
+  margin: 11px 20px 0 0;
+  font-size: 15px;
+  color: gray;
+  text-transform: uppercase;
+}
+
+input[type=text],
+input[type=password] {
+  font: 14px normal uppercase, arial, serif;
+  color: dimgray;
+  background: none;
+  width: 380px;
+  height: 37px;
+  padding: 0 10px;
+  margin: 0 0 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type=text],
+input[type=password]:focus {
+  background-color: #fff;
+}
